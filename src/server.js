@@ -43,4 +43,5 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 // import routes
 app.use(require('./routes'));
 
-server.listen(3333);
+// heroku automatically uses POST env var
+server.listen(process.env.PORT || 3333);
