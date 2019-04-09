@@ -24,7 +24,7 @@ mongoose.connect('mongodb+srv://pedro:pedro@cluster0-0tscx.mongodb.net/test?retr
 });
 
 // pass the io to the global request
-app.use((req, res) => {
+app.use((req, res, next) => {
     // io is the socket
     req.io = io;
 
